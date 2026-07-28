@@ -26,7 +26,7 @@ var QUESTIONS = [
 {
 key: "concern",
 type: "choice",
-eyebrow: "Just 3 minutes left to complete.",
+eyebrow: "Just 3 minutes to complete.",
 question: "What&rsquo;s your main reason for exploring stem cell therapy?",
 options: [
 "Chronic pain or Joint Recovery",
@@ -42,7 +42,7 @@ options: [
 {
 key: "duration",
 type: "choice",
-eyebrow: "Just 3 minutes left to complete.",
+eyebrow: "Just 3 minutes to complete.",
 question: "How long have you been experiencing this?",
 options: ["Less than 6 months", "6-12 months", "1-3 years", "3+ years"]
 },
