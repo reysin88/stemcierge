@@ -1,6 +1,6 @@
 /**
  * STEMCIERGE Article Cost Estimator CTA
- * Version: 1.2.0
+ * Version: 1.3.0
  *
  * Article embed:
  * <div data-stemcierge-cost-cta></div>
@@ -15,7 +15,7 @@
   const SELECTOR = "[data-stemcierge-cost-cta]";
   const ESTIMATOR_URL =
     "https://stemcierge.com/stem-cell-therapy-cost-estimator#calculator";
-  const CTA_VERSION = "cost-estimator-v1.2";
+  const CTA_VERSION = "cost-estimator-v1.3";
 
   function loadWorkSans() {
     if (document.querySelector('link[data-stemcierge-work-sans="true"]')) return;
@@ -127,8 +127,13 @@
       }
 
       .sc-cost-cta__benefits svg {
-        width: 15px;
-        height: 15px;
+        display: block;
+        width: 15px !important;
+        height: 15px !important;
+        min-width: 15px !important;
+        max-width: 15px !important;
+        min-height: 15px !important;
+        max-height: 15px !important;
         flex: 0 0 15px;
         fill: #8a7652;
       }
@@ -272,21 +277,21 @@
 
           <div class="sc-cost-cta__benefits">
             <span>
-              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <svg width="15" height="15" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                 <path d="M7.7 14.3 3.4 10l1.4-1.4 2.9 2.9 7.5-7.5 1.4 1.4z"></path>
               </svg>
               Compare pricing by country
             </span>
 
             <span>
-              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <svg width="15" height="15" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                 <path d="M7.7 14.3 3.4 10l1.4-1.4 2.9 2.9 7.5-7.5 1.4 1.4z"></path>
               </svg>
               Understand what affects cost
             </span>
 
             <span>
-              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <svg width="15" height="15" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                 <path d="M7.7 14.3 3.4 10l1.4-1.4 2.9 2.9 7.5-7.5 1.4 1.4z"></path>
               </svg>
               Get a personalized estimate
@@ -334,8 +339,13 @@
   function renderCTA(element) {
     if (!element || element.dataset.stemciergeRendered === "true") return;
 
+    element.style.visibility = "hidden";
     element.innerHTML = getMarkup();
     element.dataset.stemciergeRendered = "true";
+
+    requestAnimationFrame(function () {
+      element.style.visibility = "visible";
+    });
 
     const link = element.querySelector("[data-stemcierge-cost-cta-link]");
     if (link) {
