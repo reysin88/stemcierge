@@ -1,20 +1,21 @@
 /**
  * STEMCIERGE Article Cost Estimator CTA
- * Version: 1.0.0
+ * Version: 1.2.0
  *
  * Article embed:
  * <div data-stemcierge-cost-cta></div>
  *
- * Load this file once globally with:
- * <script src="YOUR_PUBLIC_URL/stemcierge-cost-cta.js" defer></script>
+ * Load with:
+ * <script src="https://cdn.jsdelivr.net/gh/reysin88/stemcierge@main/stemcierge-cost-cta.js"></script>
  */
 
 (function () {
   "use strict";
 
   const SELECTOR = "[data-stemcierge-cost-cta]";
-  const ESTIMATOR_URL = "https://stemcierge.com/stem-cell-therapy-cost-estimator#calculator";
-  const CTA_VERSION = "cost-estimator-v1";
+  const ESTIMATOR_URL =
+    "https://stemcierge.com/stem-cell-therapy-cost-estimator#calculator";
+  const CTA_VERSION = "cost-estimator-v1.2";
 
   function loadWorkSans() {
     if (document.querySelector('link[data-stemcierge-work-sans="true"]')) return;
@@ -109,14 +110,14 @@
       }
 
       .sc-cost-cta__benefits {
-        display: flex;
+        display: grid;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 9px 20px;
+        gap: 9px;
         margin: 0 auto 26px;
         color: #4f535e;
         font-size: 13px;
         line-height: 1.4;
+        text-align: left;
       }
 
       .sc-cost-cta__benefits span {
@@ -226,10 +227,6 @@
         }
 
         .sc-cost-cta__benefits {
-          display: grid;
-          justify-content: center;
-          text-align: left;
-          gap: 9px;
           margin-bottom: 23px;
         }
 
@@ -300,6 +297,8 @@
             href="${ESTIMATOR_URL}"
             class="sc-cost-cta__button"
             data-stemcierge-cost-cta-link
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Get My Cost Estimate
             <span aria-hidden="true">→</span>
