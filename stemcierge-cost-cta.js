@@ -13,7 +13,7 @@
   "use strict";
 
   const SELECTOR = "[data-stemcierge-cost-cta]";
-  const ESTIMATOR_URL = "https://stemcierge.com/stem-cell-therapy-cost-estimator";
+  const ESTIMATOR_URL = "https://stemcierge.com/stem-cell-therapy-cost-estimator#calculator";
   const CTA_VERSION = "cost-estimator-v1";
 
   function loadWorkSans() {
