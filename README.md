@@ -17,6 +17,7 @@ npm run dev
 Connect this project directory to Cloudflare Workers Builds.
 - Build command: `npm run build`
 - Deploy command: `npx wrangler deploy`
+- Preview command: `npx wrangler preview`
 
 Use the generated workers.dev URL for the design-polish stage.
 
@@ -32,3 +33,9 @@ Before enabling broad namespace routes, audit all existing URLs under those path
 
 ## Editing model
 The Knee OA page is now broken into section-level components in `src/components/knee-oa/`. We can do the final global design pass in staging, then extract shared condition-page primitives for subsequent condition pages.
+
+
+### Recommended branch setup
+- Production branch: `main` later, after approval
+- Design/staging branch: `astro-commercial-staging`
+- Enable Preview Builds so pushes to the staging branch receive a Cloudflare Preview URL.
