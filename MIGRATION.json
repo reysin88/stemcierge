@@ -1,0 +1,21 @@
+{
+  "source": "/mnt/data/stemcierge-knee-oa-stage1-custom-icons-final-cta.html",
+  "page": "src/pages/conditions/knee-osteoarthritis.astro",
+  "status": "staging/noindex",
+  "components": [
+    "HeroOpening",
+    "PatientGoals",
+    "PageNavigation",
+    "EvidenceFoundation",
+    "TreatmentOptions",
+    "PatientFitSafety",
+    "StemciergeDecisionSupport",
+    "CostTravelDecision",
+    "FaqReferencesFinal"
+  ],
+  "notes": [
+    "Faithful migration baseline, not the final global polish pass",
+    "Header/footer are temporary staging replicas",
+    "Custom images and exact Webflow global shell still pending"
+  ]
+}

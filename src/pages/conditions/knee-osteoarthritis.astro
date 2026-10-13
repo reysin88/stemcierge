@@ -1,0 +1,134 @@
+---
+import CommercialLayout from '../../layouts/CommercialLayout.astro';
+import SiteHeader from '../../components/site/SiteHeader.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import HeroOpening from '../../components/knee-oa/HeroOpening.astro';
+import PatientGoals from '../../components/knee-oa/PatientGoals.astro';
+import PageNavigation from '../../components/knee-oa/PageNavigation.astro';
+import EvidenceFoundation from '../../components/knee-oa/EvidenceFoundation.astro';
+import TreatmentOptions from '../../components/knee-oa/TreatmentOptions.astro';
+import PatientFitSafety from '../../components/knee-oa/PatientFitSafety.astro';
+import StemciergeDecisionSupport from '../../components/knee-oa/StemciergeDecisionSupport.astro';
+import CostTravelDecision from '../../components/knee-oa/CostTravelDecision.astro';
+import FaqReferencesFinal from '../../components/knee-oa/FaqReferencesFinal.astro';
+import '../../styles/shell.css';
+import '../../styles/knee-oa.css';
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "url": "https://stemcierge.com/conditions/knee-osteoarthritis/",
+    "name": "Stem Cell Therapy for Knee Osteoarthritis: Evidence & Treatment Options",
+    "description": "Evidence-led guide to cell-based and regenerative treatment options for knee osteoarthritis, including evidence, treatment types, candidacy, risks, costs and clinic evaluation.",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-13",
+    "medicalAudience": {
+      "@type": "MedicalAudience",
+      "audienceType": "Patient"
+    },
+    "mainEntity": {
+      "@type": "MedicalCondition",
+      "name": "Knee osteoarthritis",
+      "alternateName": "Knee OA"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "STEMCIERGE",
+      "url": "https://stemcierge.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "STEMCIERGE",
+      "url": "https://stemcierge.com"
+    },
+    "specialty": "https://schema.org/Orthopedic"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://stemcierge.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Conditions",
+        "item": "https://stemcierge.com/conditions/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Orthopedic & Musculoskeletal",
+        "item": "https://stemcierge.com/conditions/orthopedic-musculoskeletal/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Knee Osteoarthritis",
+        "item": "https://stemcierge.com/conditions/knee-osteoarthritis/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does stem cell therapy work for knee osteoarthritis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some randomized studies suggest certain cell-based treatments may improve pain and function, while others find little or no advantage over placebo or conventional injections. Results depend heavily on the exact product, protocol and patient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can stem cells regrow knee cartilage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Routine intra-articular stem-cell injections have not been shown to reliably regenerate durable normal knee cartilage. Symptom improvement and cartilage regeneration should not be treated as the same outcome."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best stem cell treatment for knees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No cell source, product or dose has been established as universally superior for knee osteoarthritis. Treatment comparisons should focus on the exact product, protocol, evidence and patient diagnosis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PRP a stem cell treatment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. PRP is produced from concentrated platelets in blood and is not a therapeutic stem-cell product."
+        }
+      }
+    ]
+  }
+];
+const title = "Stem Cell Therapy for Knee Osteoarthritis: Evidence & Treatment Options | STEMCIERGE";
+const description = "Considering stem cell therapy for knee osteoarthritis? Compare the evidence, treatment types, candidacy, risks, costs, clinic quality and international options before you commit.";
+const canonical = 'https://stemcierge.com/conditions/knee-osteoarthritis/';
+---
+<CommercialLayout {title} {description} {canonical} {schemas} noindex={true}>
+  <SiteHeader slot="header" />
+  <main>
+    <HeroOpening />
+    <PatientGoals />
+    <PageNavigation />
+    <EvidenceFoundation />
+    <TreatmentOptions />
+    <PatientFitSafety />
+    <StemciergeDecisionSupport />
+    <CostTravelDecision />
+    <FaqReferencesFinal />
+  </main>
+  <SiteFooter slot="footer" />
+  <script src="/scripts/knee-oa.js"></script>
+</CommercialLayout>

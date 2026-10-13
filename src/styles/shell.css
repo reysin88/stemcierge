@@ -1,0 +1,13 @@
+
+:root{--sc-global-dark:#0D1117;--sc-global-sand:#CBBBA0;--sc-global-paper:#F7F4EE}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#0D1117;font-family:"Work Sans",system-ui,sans-serif}
+.sc-site-header{position:relative;z-index:50;background:#0D1117;color:#fff;border-bottom:1px solid rgba(255,255,255,.10)}
+.sc-site-header__inner{width:min(1200px,calc(100% - 48px));min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.sc-site-logo{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.08em;font-size:17px}
+.sc-site-nav{display:flex;gap:28px;align-items:center}
+.sc-site-nav a{color:rgba(255,255,255,.78);text-decoration:none;font-size:14px}.sc-site-nav a:hover{color:#fff}
+.sc-site-footer{background:#0D1117;color:#fff;padding:56px 0}
+.sc-site-footer__inner{width:min(1200px,calc(100% - 48px));margin:auto}.sc-site-footer p{color:rgba(255,255,255,.64)}
+.sc-site-footer__links{display:flex;gap:20px}.sc-site-footer a{color:#CBBBA0}
+@media(max-width:760px){.sc-site-header__inner{min-height:64px}.sc-site-nav{display:none}.sc-site-header__inner,.sc-site-footer__inner{width:min(100% - 40px,1200px)}}
