@@ -2,5 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "stemcierge-commercial",
   "compatibility_date": "2026-10-13",
-  "assets": { "directory": "./dist" }
+  "assets": {
+    "directory": "./dist"
+  },
+  "previews": {}
 }
